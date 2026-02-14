@@ -86,9 +86,9 @@ galleryContainer.insertAdjacentHTML("afterbegin", galleryMarkup);
 // -----Слухач подій на батька-------
 galleryContainer.addEventListener("click", onGalleryList);
 
-// -----перевірка щоб клік не працював на батька-------
+// -----перевірка щоб клік  працював тільки на img-------
 function onGalleryList(event) {
-  if (event.target === event.currentTarget) {
+  if (event.target.nodeName !== "IMG") {
     return;
   }
   // -----заборона перезавантаження-------
